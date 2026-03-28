@@ -1,0 +1,18 @@
+﻿职位名称：Python 后端开发工程师（AI Agent方向）
+
+岗位职责：
+- 负责基于 Django/DRF 构建高可用后端服务，支撑 AI Agent 产品能力。
+- 负责设计并实现 RAG 检索流程，包括向量化、召回与结果重排。
+- 负责 MySQL、Redis 的性能优化，保障高并发下系统稳定性。
+- 与前端及算法同学协作，持续优化用户交互体验与模型调用效率。
+
+任职要求：
+- 熟悉 Python 语言特性，3 年以上后端开发经验。
+- 熟悉 Django、DRF、Gunicorn、Nginx 等常见 Web 技术栈。
+- 熟悉 MySQL 索引原理、事务机制、慢查询优化。
+- 熟悉 Redis 缓存设计，理解缓存一致性与热点治理方案。
+- 有 OpenAI/DeepSeek API、LangChain、LlamaIndex 或 Agent 项目经验。
+
+加分项：
+- 有 Docker/K8s、CI/CD 实践经验。
+- 有可观测性体系建设经验（日志、指标、追踪）。
