@@ -3,6 +3,7 @@ from django.db import models
 
 
 class ChatSession(models.Model):
+    """会话主题表，用户、主题、会话创建时间"""
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     topic = models.CharField(max_length=255, help_text="会话主题, 如'简历优化'或'模拟面试-Python'")
     created_at = models.DateTimeField(auto_now_add=True)
@@ -15,6 +16,7 @@ class ChatSession(models.Model):
 
 
 class ChatMessage(models.Model):
+    """消息明细表，挂在会话主题下面(一个会话，多条信息)，角色（用户/ai），正文，结构化信息，创建时间"""
     session = models.ForeignKey(ChatSession, on_delete=models.CASCADE, related_name="messages")
     ROLE_CHOICES = [("user", "User"), ("assistant", "Assistant")]
     role = models.CharField(max_length=10, choices=ROLE_CHOICES)

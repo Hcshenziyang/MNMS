@@ -55,6 +55,7 @@ def tokenize(text: str) -> list[str]:
 
 
 def extract_keywords(text: str, top_n: int = 15) -> list[str]:
+    """提取关键词，去掉停用词，去短词，统计词频，取TopN"""
     counter = Counter()
     for token in tokenize(text):
         if token in STOPWORDS:
@@ -66,6 +67,7 @@ def extract_keywords(text: str, top_n: int = 15) -> list[str]:
 
 
 def pick_lines(text: str, hints: Iterable[str], limit: int = 5) -> list[str]:
+    """基于语义提示词的规则抽取，职责、必须、加分"""
     rows = [line.strip(" -•\t") for line in text.splitlines() if line.strip()]
     selected: list[str] = []
     for row in rows:

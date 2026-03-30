@@ -11,3 +11,5 @@ backend/data/vector_store/index.faiss
 backend/data/vector_store/index_meta.json
 frontend/node_modules/
 frontend/dist/
+INTERVIEW*.md
+PROJECT*.md
