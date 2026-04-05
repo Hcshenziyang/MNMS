@@ -1,9 +1,9 @@
 #!/usr/bin/env python
+from __future__ import annotations
+
 import os
 import sys
 from pathlib import Path
-
-import django
 
 
 def main() -> int:
@@ -12,10 +12,7 @@ def main() -> int:
     if str(project_root) not in sys.path:
         sys.path.insert(0, str(project_root))
 
-    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "phoenix_project.settings")
-    django.setup()
-
-    from apps.agent_engine.tools.rag_store import RAGStore
+    from app.agent_engine.tools.rag_store import RAGStore
 
     store = RAGStore.get_instance()
     store.build_index()
